@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dream.qianjin.bean.Company" table="company"
+		dynamic-update="true" dynamic-insert="true">
+		<id name="ID" column="ID">
+			<generator class="uuid.hex">
+			</generator>
+		</id>
+		<property name="numOfCompany" column="numOfCompany"/>
+		<property name="companyRegCapital" column="companyRegCapital" />
+		<property name="isSamePeople" column="isSamePeople"/>
+		<property name="name" column="name" />
+		<property name="nickName" column="nickName" />
+		<property name="positionName" column="positionName" />
+		
+		<property name="scopeBusiness" column="scopeBusiness" />
+		<property name="businessLicense" column="businessLicense" />
+		<property name="IDCard" column="IDCard" />
+		
+		<property name="positionProve" column="positionProve" />
+		<property name="industry" column="industry" />
+		
+		<property name="isVerifyIDCard" column="isVerifyIDCard" />
+		<property name="isVerifyBusLic" column="isVerifyBusLic" />
+		<property name="isVerifyProve" column="isVerifyProve" />
+		<property name="verifiedTime" column="verifiedTime" />
+		<property name="isShow" column="isShow" />
+		<property name="annualTurnover" column="AnnualTurnover" />
+	</class>
+</hibernate-mapping>

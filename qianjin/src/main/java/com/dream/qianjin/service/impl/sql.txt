@@ -1,0 +1,18 @@
+//增加
+jdbcTemplate.update("INSERT INTO USER VALUES(?, ?, ?, ?)",
+                     new PreparedStatementSetter() {
+                         public void setValues(PreparedStatement ps) throws SQLException {
+                             ps.setString(1, id);
+                             ps.setString(2, name);          
+                             ps.setString(3, sex);
+                             ps.setInt(4, age);
+                         }
+                     });
+
+查                     
+template.query("select * from web_person where id=?",Object[],new RowCallbackHandler(){
+  public void processRow(ResultSet rs) throws SQLException {
+   person.setId(rs.getInt("id"));
+ });
+             
+

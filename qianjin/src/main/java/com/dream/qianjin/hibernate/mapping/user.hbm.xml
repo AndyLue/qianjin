@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dream.qianjin.bean.User" table="user"
+		dynamic-update="true" dynamic-insert="true">
+		<id name="ID" column="ID">
+			<generator class="uuid.hex">
+			</generator>
+		</id>
+		<property name="loginID" column="LoginID"/>
+		<property name="passWord" column="passWord" />
+		<property name="signaTureID" column="signaTureID" />
+		<property name="sex" column="sex" />
+		<property name="createTime" column="createTime" />
+		<property name="modifyTime" column="modifyTime" />
+		<property name="telephone" column="telephone" />
+		<property name="name" column="name" />
+		<property name="email" column="email" />
+		<property name="avatar_Mid" column="avatar_Mid" />
+		
+		<property name="userPictureID" column="userPictureID" />
+		<property name="myCompanyID" column="myCompanyID" />
+		<property name="verifyCodeID" column="verifyCodeID" />
+		<property name="age" column="age" />
+		<property name="nationID" column="NationID" type="java.lang.Integer"/>
+		<property name="provinceID" column="ProvinceID" type="java.lang.Integer"/>
+		<property name="cityID" column="CityID" type="java.lang.Integer"/>
+		<property name="userStateID" column="UserStateID" type="java.lang.Integer"/>
+		<property name="verifyCodeBelong" column="VerifyCodeBelong" />
+		<property name="companyNum" column="CompanyNum" type="java.lang.Integer" />
+		<property name="points" column="points" type="java.lang.Integer" />
+		<property name="location" column="location"/>
+	</class>
+</hibernate-mapping>
